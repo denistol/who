@@ -1,5 +1,11 @@
 # 🤙 Who Wants to Be a Millionaire — Quiz Game
 
+### Vercel url:
+
+https://who-cmvlovm69-denis-projects-adf6d64c.vercel.app/
+
+---
+
 An interactive quiz game built with **Next.js, TypeScript, TailwindCSS, and Firebase**.
 
 The application automatically persists the user session in the browser and synchronizes it with Firebase, allowing the game to continue seamlessly even after a page reload.
