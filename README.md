@@ -50,6 +50,19 @@ This ensures the game is resilient to refreshes or accidental tab closures.
 
 ---
 
+## Required .env variables
+
+```
+API_KEY
+AUTH_DOMAIN
+PROJECT_ID
+STORAGE_BUCKET
+MESSAGING_SENDER_ID
+APP_ID
+MEASUREMENT_ID
+NEXT_PUBLIC_BASE_URL
+```
+
 
 ## 📦 Installation
 
@@ -57,3 +70,5 @@ This ensures the game is resilient to refreshes or accidental tab closures.
 git clone <repository-url>
 cd project-name
 npm install && npm run dev
+
+
