@@ -2,7 +2,7 @@
 
 ### Vercel url:
 
-https://who-cmvlovm69-denis-projects-adf6d64c.vercel.app/
+https://who-rosy.vercel.app/
 
 ---
 
