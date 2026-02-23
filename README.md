@@ -1,36 +1,59 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🤙 Who Wants to Be a Millionaire — Quiz Game
 
-## Getting Started
+An interactive quiz game built with **Next.js, TypeScript, TailwindCSS, and Firebase**.
 
-First, run the development server:
+The application automatically persists the user session in the browser and synchronizes it with Firebase, allowing the game to continue seamlessly even after a page reload.
+
+---
+
+## Project Overview
+
+This project is a browser-based quiz game inspired by *"Who Wants to Be a Millionaire"*.
+
+### Key Features
+
+- ✅ Step-by-step question flow  
+- ✅ Answer state highlighting (selected / correct / wrong)  
+- ✅ Score tracking system  
+- ✅ Automatic session persistence in the browser  
+- ✅ Real-time synchronization with Firebase  
+- ✅ Game state restoration after page reload  
+- ✅ Fully responsive UI (mobile + desktop)  
+
+---
+
+## 🧠 Session Management Logic
+
+The game implements a persistent session system:
+
+1. When a user starts the game, a new session is created.
+2. The `sessionId` is stored in `localStorage`.
+3. The session state is saved in Firebase.
+4. On page reload:
+   - The app retrieves `sessionId` from `localStorage`.
+   - The latest session state is fetched from Firebase.
+   - The game resumes from the current question.
+5. If the session is finished, the result screen is shown.
+6. Starting a new game destroys the current session and creates a new one.
+
+This ensures the game is resilient to refreshes or accidental tab closures.
+
+---
+
+## 🏗 Tech Stack
+
+- **Next.js** — React framework (App Router, API routes)
+- **TypeScript** — Type safety and better maintainability
+- **TailwindCSS** — Utility-first styling
+- **Firebase** — Backend & session persistence
+- **LocalStorage API** — Client-side session identifier storage
+
+---
+
+
+## 📦 Installation
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+git clone <repository-url>
+cd project-name
+npm install && npm run dev
